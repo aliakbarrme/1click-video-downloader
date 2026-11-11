@@ -1,22 +1,26 @@
 # 1-Click Video Downloader (Chrome)
 
-YouTube, Facebook, Instagram, TikTok, X, Vimeo shoho 1000+ site theke 1 click e video download. Bhitore [yt-dlp](https://github.com/yt-dlp/yt-dlp) kaj kore.
+IDM-er moto: jekono video-r **upor dane "Download" button** ashe. Click korle quality list (1080p, 720p, MP3…) dekhay. Quality bachai korle folder jiggesh kore, tarpor download hoy.
+YouTube, Facebook, Instagram, TikTok, X, Vimeo shoho 1000+ site support kore. Bhitore [yt-dlp](https://github.com/yt-dlp/yt-dlp) kaj kore.
 
 ## Setup (ekbar)
-1. `host\install.bat` e double-click korun. Eta yt-dlp, ffmpeg install kore ar Chrome er sathe helper register kore.
-2. Chrome e `chrome://extensions` kholun → **Developer mode** on → **Load unpacked** → `extension` folder select korun.
-3. Puzzle icon theke extension ta **pin** korun.
-4. Chrome purapuri bondho kore abar khulun.
+1. ZIP **Extract all** koro. Folder ta pore ar sorio na.
+2. `host\install.bat` e double-click koro. Eta yt-dlp ar ffmpeg install kore, tarpor Chrome er sathe helper register kore.
+3. Chrome e `chrome://extensions` → **Developer mode** on → **Load unpacked** → `extension` folder select koro.
+4. Chrome purapuri bondho kore abar kholo.
 
 ## Babohar
-- Jekono video page e toolbar er **blue ↓ button** e click korun. Download shuru hoye jabe.
-- Ba link/video/page e **right-click → "…video download korun"**.
-- Icon er upor % progress dekhay. Shesh hole notification ashe.
-- File save hoy: `Downloads\Videos`
+- **Video-r upor button:** video-r top-right e **⬇ Download** → quality select → folder select → download. Button e % progress dekhabe.
+- **Folder:** menu-r niche **Change** diye default folder thik koro. "Protibar folder jiggesh korbe" off korle shob shomoy oi folder e save hobe.
+- **Toolbar icon:** 1 click e best quality, last folder e.
+- **Right-click:** link, video ba page e right-click → "…video download korun".
+
+## Update
+Notun version namiye `extension` ar `host` folder replace koro, `install.bat` abar run koro, tarpor `chrome://extensions` e extension-er ↻ reload button chapo.
 
 ## Somossa hole
-- "Helper connect hoyni": `install.bat` abar run korun, tarpor Chrome restart din.
-- YouTube kaj na korle: `python -m pip install -U "yt-dlp[default]"` diye update korun.
-- `extension` ba `host` folder sorale `install.bat` abar run korun.
+- "Helper connect hoyni": `install.bat` abar run koro, tarpor Chrome restart dao.
+- 720p-er upore quality na dekhale ffmpeg install hoyni: `winget install Gyan.FFmpeg` diye install koro.
+- YouTube kaj na korle yt-dlp update koro: `python -m pip install -U "yt-dlp[default]"`
 
-> Shudhu nijer ba onumoti ache emon video download korun. Kichu site er niyome download nished.
+> Shudhu nijer ba onumoti ache emon video download korbe. Kichu site er niyome download nished.

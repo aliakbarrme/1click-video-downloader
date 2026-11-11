@@ -1,14 +1,45 @@
 {
   "manifest_version": 3,
   "name": "1-Click Video Downloader",
-  "version": "1.0.0",
-  "description": "Toolbar button e 1 click e current page er video computer e download (yt-dlp diye).",
+  "version": "1.1.0",
+  "description": "IDM-er moto video-r upor Download button: quality ar folder bachai kore 1000+ site theke video download (yt-dlp).",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApD5uDSqwSh9VQ7gtOUl/xxF2+z2i+Flcs09WgA9e4tCyQE9NN645BhDj+v/c55GpzYYPRF8c+QeK8jvRqXyCc1R0SzpAMQblm7arS0aXTbJy0Z9CfKMKeh+uGH2AfGdALYHDTKwTeLzt7U5p7cKJSKz0QWQKLDDkvOpej4MenacIHpGWdtdlq1/UHRJe+Z4SsUQt4UxpOpkZkLfX/I9s51yNxH1BtNaE3lpPU+HvV2gA+UIkwAQEBWRC+bsTC+9XdLfaRTNRfrWBSzDCJBTmabQyINAtxq2jU21T6o+FzwvbXcim6H7Q9V5zSTpUKpm7vRVnqB1tHA5alKX01cN6bwIDAQAB",
-  "permissions": ["nativeMessaging", "contextMenus", "notifications", "activeTab"],
-  "background": { "service_worker": "background.js" },
-  "action": {
-    "default_title": "Ei page er video download korun (1 click)",
-    "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+  "permissions": [
+    "nativeMessaging",
+    "contextMenus",
+    "notifications",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
   },
-  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+  "action": {
+    "default_title": "1 click e best quality download (last folder e)",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
 }
